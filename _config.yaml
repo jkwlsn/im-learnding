@@ -1,0 +1,29 @@
+title: "i'm learnding"
+description: "A blog about all the computer stuff i'm learnding"
+url: "https://jacobcharleswilson.com/im-learnding"
+author:
+  name: "Jake Wilson"
+  email: "hello@jacobcharleswilson.com"
+lang: "en_GB"
+timezone: "Europe/London"
+permalink: "/:year-:month-:day/:title:output_ext"
+markdown: "kramdown"
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
+# Default Post Front Matter
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "post"
+      author: "Jake Wilson" 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - TODO.md
+  - eslint.config.js
+  - node_modules
+  - package-lock.json
+  - package.json
+  - stylelint.config.js
