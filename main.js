@@ -19,7 +19,7 @@ function getCookie(name) {
 
 function success() {
         // Define assets 
-        const images = ['_assets/cat trace2.svg', '_assets/cat trace3.svg'];
+        const images = ['_assets/cat_trace2.svg', '_assets/cat_trace3.svg'];
         const audio = new Audio('learnding.mp3');
         
         // Animate
