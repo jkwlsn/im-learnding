@@ -1,0 +1,146 @@
+@font-face {
+	font-family: Simpsons;
+	font-style: normal;
+	font-weight: normal;
+	src: local('Simpsonfont SimpsonfontSimpsonfont'), url('/assets/fonts/simpsonfont.woff') format('woff');
+}
+
+:root {
+    --primary-color: blue;
+    --secondary-color: #82bdbe;
+	--heading-fonts: "Simpsons", "Comic Sans MS", "Comic Sans", cursive;
+	--body-fonts: "Comic Sans MS", "Comic Sans", cursive, monospace, monospace;
+}
+
+body {
+    border:0;
+    margin:0;
+    padding:1em;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-size: 1.4em;
+	font-family: var(--body-fonts)
+}
+
+h1, h2, h3, h4 {
+	font-family: var(--heading-fonts)
+}
+
+article header h1 {
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 1em 0;
+}
+
+p {
+    line-height: 1.5;
+}
+
+code {
+    display: block;
+    background: #343434;
+    color: #fefefe;
+    padding: 2em;
+    text-wrap-mode: wrap;
+    border: 0.5em solid #6F4E37;
+}
+
+#cat-image {
+    width:50vw;
+}
+
+#cat-header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+}
+
+.hidden #main, .hidden #site-header {
+    display:none;
+    overflow:hidden;
+}
+
+.cat-input {
+    text-transform: uppercase;
+    border:none;
+    border-bottom: 8px blue solid;
+    font-size: 6em;
+    caret-color: var(--primary-color);
+    caret-shape: block;
+    color: var(--primary-color);
+    outline:none;
+    background-color: inherit;
+}
+
+.article-date {
+    display: block;
+    font-weight: bold;
+    font-size: xx-large;
+    margin: 1em 0;
+}
+
+.article-tag-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.article-tag-item {
+    border: solid 2px blue;
+    padding:2px;
+    margin:2px;
+    border-radius: 0.3em;
+}
+
+.article-tag-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+::selection {
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+}
+
+@media only screen and (width >= 900px) {
+    body{
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2em;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / -1;
+    }
+
+    .article-wrapper {
+        grid-column:  3 / -1;
+        grid-row: 1;
+    }
+
+    article footer {
+        grid-column: 1 / 3;
+        grid-row: 1;
+    }
+
+    #site-header {
+        grid-column: 4 / 12;
+    }
+
+    #main {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 2 / 12;
+    }
+
+    #cat-header {
+        grid-column: 1 / -1;
+    }
+}
