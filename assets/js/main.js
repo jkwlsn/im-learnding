@@ -19,8 +19,8 @@ function getCookie(name) {
 
 function success() {
         // Define assets 
-        const images = ['_assets/cat_trace2.svg', '_assets/cat_trace3.svg'];
-        const audio = new Audio('learnding.mp3');
+        const images = ['assets/images/cat_trace2.svg', 'assets/images/cat_trace3.svg'];
+        const audio = new Audio('assets/audio/learnding.mp3');
         
         // Animate
         let currentIndex = 0;
@@ -38,6 +38,15 @@ function success() {
 
         // Remove hidden class
         document.body.classList.remove('hidden');
+        
+        setTimeout(() => { 
+            // Scroll down
+            document.getElementById("site-header").scrollIntoView({ behavior: "smooth" });
+        }, 3000);
+
+        setTimeout(() => { 
+            document.getElementById("cat-header").style.display = "none";
+        }, 4000);
 }
 
 function playGame() {
@@ -74,8 +83,10 @@ function playGame() {
 function init() {
     if ( getCookie('guessed') !== 'true' ) {
         document.body.classList.add('hidden');
+        playGame();
+    } else {
+        document.getElementById("cat-header").style.display = "none";
     }
-    playGame();
 }
 
 document.addEventListener('DOMContentLoaded', init);
