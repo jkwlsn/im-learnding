@@ -1,6 +1,7 @@
 title: "i'm learnding"
 description: "A blog about all the computer stuff i'm learnding"
-url: "https://jacobcharleswilson.com/im-learnding"
+url: "https://jacobcharleswilson.com"
+baseurl: "/im-learnding"
 author:
   name: "Jake Wilson"
   email: "hello@jacobcharleswilson.com"

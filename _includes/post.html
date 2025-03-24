@@ -1,7 +1,7 @@
 <article class="article">
     <div class="article-wrapper">
         <header class="article-header">
-            <h1 class="article-title"><a href="{{ post.url | xml_escape }}"> {{ post.title }}</a></h1>
+            <h1 class="article-title"><a href="{{ site.baseurl | append: post.url | xml_escape }}"> {{ post.title }}</a></h1>
         </header>
         <section class="article-content">
             {{ post.content }}
@@ -12,7 +12,7 @@
         {% if post.tags %}
         <ul class="article-tag-list">
             {% for tag in post.tags %}
-            <li class="article-tag-item"><a title="" href="/archive#{{ tag | slugize}}">{{ tag }}</a></li>
+            <li class="article-tag-item"><a title="" href="{{ site.baseurl }}/archive#{{ tag | slugize}}">{{ tag }}</a></li>
             {% endfor %}
         </ul>
         {% endif %}
