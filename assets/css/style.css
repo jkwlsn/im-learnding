@@ -32,6 +32,10 @@ form input {
     font-family: var(--body-fonts)
 }
 
+form button {
+    visibility: hidden;
+}
+
 h1, h2, h3, h4 {
     font-family: var(--heading-fonts)
 }

@@ -9,7 +9,7 @@ title: i learnded
     <li>
         <h2>{{ tag[0] }}</h2>
         <ul>
-            {% for post in tag[1] %} 
+            {% for post in tag[1] %}
             <li><a href="{{ site.baseurl | append: post.url | xml_escape }}">{{ post.title }}</a></li>
             {% endfor %}
         </ul>
