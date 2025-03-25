@@ -1,15 +1,15 @@
 @font-face {
-	font-family: Simpsons;
-	font-style: normal;
-	font-weight: normal;
-	src: local('Simpsonfont SimpsonfontSimpsonfont'), url('/assets/fonts/simpsonfont.woff') format('woff');
+    font-family: Simpsons;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Simpsonfont SimpsonfontSimpsonfont'), url('/im-learnding/assets/fonts/simpsonfont.woff') format('woff');
 }
 
 :root {
     --primary-color: blue;
     --secondary-color: #82bdbe;
-	--heading-fonts: "Simpsons", "Comic Sans MS", "Comic Sans", cursive;
-	--body-fonts: "Comic Sans MS", "Comic Sans", cursive, monospace, monospace;
+    --heading-fonts: "Simpsons", "Comic Sans MS", "Comic Sans", cursive;
+    --body-fonts: "Comic Sans MS", "Comic Sans", cursive, monospace, monospace;
 }
 
 body {
@@ -19,21 +19,20 @@ body {
     background: var(--secondary-color);
     color: var(--primary-color);
     font-size: 1.4em;
-	font-family: var(--body-fonts)
+    font-family: var(--body-fonts);
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
 	font-family: var(--heading-fonts)
 }
 
-article header h1 {
-    font-weight: bold;
-    font-size: xx-large;
-    margin: 1em 0;
+form input {
+    font-family: var(--body-fonts)
 }
 
-p {
-    line-height: 1.5;
+h1, h2, h3, h4 {
+    font-family: var(--heading-fonts)
 }
 
 code {
@@ -75,6 +74,7 @@ code {
 }
 
 .article-date {
+    font-family: var(--heading-fonts);
     display: block;
     font-weight: bold;
     font-size: xx-large;
