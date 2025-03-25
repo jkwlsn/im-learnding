@@ -1,8 +1,11 @@
 {
   "scripts": {
-    "check": "html-validate _site"
+    "check": "html-validate _site/"
   },
-  "dependencies": {
-    "html-validate": "^7.16.0"
+  "devDependencies": {
+    "@html-eslint/eslint-plugin": "^0.37.0",
+    "@html-eslint/parser": "^0.37.0",
+    "eslint": "^9.23.0",
+    "html-validate": "^9.5.2"
   }
 }
