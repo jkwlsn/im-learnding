@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "check": "html-validate ."
+    "check": "html-validate _site"
   },
   "dependencies": {
     "html-validate": "^7.16.0"
