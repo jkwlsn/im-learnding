@@ -17,18 +17,16 @@
 body {
     background: var(--secondary-color);
     color: var(--primary-color);
-    font-size: 1.4em;
     font-family: var(--body-fonts);
-    line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--heading-fonts)
 }
 
 a {
     text-decoration-style: wavy;
     text-decoration-skip-ink: none;
-}
-
-form input {
-    font-family: var(--body-fonts)
 }
 
 form button {
@@ -51,6 +49,7 @@ code {
     margin: 2em;
     text-wrap-mode: wrap;
     border: 0.5em solid #6F4E37;
+    text-decoration-style: dotted;
 }
 
 code::selection, code span::selection {
@@ -70,38 +69,30 @@ code::selection, code span::selection {
     min-height:100vh;
 }
 
-.hidden #main, .hidden #site-header {
-    display:none;
+#cat-form {
+    text-align: center;
+}
+
+.hidden {
     overflow:hidden;
 }
 
 .cat-input {
+    font-family: var(--body-fonts);
+    font-size: 6em;
     text-transform: uppercase;
     border:none;
-    font-size: 6em;
     border-bottom: 8px var(--primary-color) solid;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     caret-color: var(--primary-color);
     caret-shape: block;
     outline:none;
-}
-
-.article-header {
-    background-color: var(--secondary-color);
-}
-
-.article-title {
-padding: 0;
-    font-weight: bold;
-    font-size: xx-large;
-margin: 0;
+    text-align: center;
 }
 
 .article-date {
     font-family: var(--heading-fonts);
-    font-weight: bold;
-    font-size: xx-large;
 }
 
 .article-tag-list {
