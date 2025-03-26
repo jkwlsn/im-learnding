@@ -15,9 +15,6 @@
 }
 
 body {
-    border:0;
-    margin:0;
-    padding:1em;
     background: var(--secondary-color);
     color: var(--primary-color);
     font-size: 1.4em;
@@ -42,6 +39,8 @@ blockquote {
     background: var(--primary-high-contrast-color);
     box-shadow: 0.5em 0.5em var(--secondary-high-contrast-color);
     color: var(--secondary-high-contrast-color);
+    padding: 1em;
+    margin: 2em;
 }
 
 code {
@@ -49,6 +48,7 @@ code {
     background: var(--secondary-high-contrast-color);
     color: var(--primary-high-contrast-color);
     padding: 2em;
+    margin: 2em;
     text-wrap-mode: wrap;
     border: 0.5em solid #6F4E37;
 }
@@ -89,7 +89,6 @@ code::selection, code span::selection {
 
 .article-header {
     background-color: var(--secondary-color);
-    padding: 1em 0;
 }
 
 .article-title {
@@ -101,10 +100,8 @@ margin: 0;
 
 .article-date {
     font-family: var(--heading-fonts);
-    display: block;
     font-weight: bold;
     font-size: xx-large;
-    margin: 1em 0;
 }
 
 .article-tag-list {
@@ -117,10 +114,9 @@ margin: 0;
 }
 
 .article-tag-item {
-    padding:2px;
-    margin:2px;
     border-radius: 0.3em;
     border: solid 0.2em var(--primary-color);
+    padding:0.2em;
 }
 
 .article-tag-item a {
