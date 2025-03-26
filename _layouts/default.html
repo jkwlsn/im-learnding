@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1" name="viewport">
         <title>{{ page.title }}</title>
-        <link href="{{ site.baseurl }}/assets/css/style.css" rel="stylesheet">
+        <link href="{{ 'assets/css/style.css' | relative_url }}" rel="stylesheet">
     </head>
     <body>
         {% include cat_header.html %}
@@ -12,6 +12,6 @@
         <main id="main">
             {{ content }}
         </main>
-        <script src="{{ site.baseurl }}/assets/js/main.js"></script>
+        <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
     </body>
 </html>

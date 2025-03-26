@@ -19,8 +19,8 @@ function getCookie(name) {
 
 function success() {
         // Define assets 
-        const images = ['assets/images/cat_trace2.svg', 'assets/images/cat_trace3.svg'];
-        const audio = new Audio('assets/audio/learnding.mp3');
+        const images = ['/im-learnding/assets/images/cat_trace2.svg', '/im-learnding/assets/images/cat_trace3.svg'];
+        const audio = new Audio('/im-learnding/assets/audio/learnding.mp3');
         
         // Animate
         let currentIndex = 0;
