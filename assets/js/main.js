@@ -1,15 +1,15 @@
 function setCookie(name, value, days) {
-    let d = new Date();
+    const d = new Date();
     d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000)); // Expiration time
-    let expires = "expires=" + d.toUTCString();
+    const expires = "expires=" + d.toUTCString();
     document.cookie = name + "=" + value + ";" + expires + ";SameSite=Lax";
 }
 
 function getCookie(name) {
-    let nameEQ = name + "=";
-    let ca = document.cookie.split(';');
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
     for (let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim();
+        const c = ca[i].trim();
         if (c.indexOf(nameEQ) === 0) {
             return c.substring(nameEQ.length, c.length);
         }
@@ -52,8 +52,8 @@ function success() {
 function playGame() {
     document.querySelector('#cat-form').addEventListener("keyup", function(event) {
     
-        let target = event.srcElement || event.target;
-        let inputLength = target.value.length;
+        const target = event.srcElement || event.target;
+        const inputLength = target.value.length;
        
         // Move focus to next or previous input
         const moveFocus = (direction) => {
