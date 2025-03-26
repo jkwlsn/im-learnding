@@ -30,7 +30,7 @@ a {
 }
 
 form button {
-    visibility: hidden;
+    display: none;
 }
 
 blockquote {
@@ -57,16 +57,16 @@ code::selection, code span::selection {
     color: #343434
 }
 
-#cat-image {
-    width:50vw;
-}
-
 #cat-header {
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height:100vh;
+    height:100vh;
+}
+
+#cat-image {
+    height:50vh;
 }
 
 #cat-form {
@@ -100,14 +100,14 @@ code::selection, code span::selection {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     gap: 1em;
 }
 
 .article-tag-item {
-    border-radius: 0.3em;
     border: solid 0.2em var(--primary-color);
     padding:0.2em;
+    border-radius: 0.4em;
 }
 
 .article-tag-item a {
@@ -120,7 +120,7 @@ code::selection, code span::selection {
     color: var(--secondary-color);
 }
 
-@media (width >= 800px) {
+@media (width >= 900px) {
     body {
         display: grid;
         grid-gap: 2em;
