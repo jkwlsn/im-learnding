@@ -8,6 +8,8 @@
 :root {
     --primary-color: blue;
     --secondary-color: #82bdbe;
+    --primary-high-contrast-color: #fefefe;
+    --secondary-high-contrast-color: #343434;
     --heading-fonts: "Simpsons", "Comic Sans MS", "Comic Sans", cursive;
     --body-fonts: "Comic Sans MS", "Comic Sans", cursive, monospace, monospace;
 }
@@ -36,14 +38,16 @@ form button {
     visibility: hidden;
 }
 
-h1, h2, h3, h4 {
-    font-family: var(--heading-fonts)
+blockquote {
+    background: var(--primary-high-contrast-color);
+    box-shadow: 0.5em 0.5em var(--secondary-high-contrast-color);
+    color: var(--secondary-high-contrast-color);
 }
 
 code {
     display: block;
-    background: #343434;
-    color: #fefefe;
+    background: var(--secondary-high-contrast-color);
+    color: var(--primary-high-contrast-color);
     padding: 2em;
     text-wrap-mode: wrap;
     border: 0.5em solid #6F4E37;
@@ -74,13 +78,13 @@ code::selection, code span::selection {
 .cat-input {
     text-transform: uppercase;
     border:none;
-    border-bottom: 8px blue solid;
     font-size: 6em;
+    border-bottom: 8px var(--primary-color) solid;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     caret-color: var(--primary-color);
     caret-shape: block;
-    color: var(--primary-color);
     outline:none;
-    background-color: inherit;
 }
 
 .article-header {
@@ -113,15 +117,15 @@ margin: 0;
 }
 
 .article-tag-item {
-    border: solid 2px blue;
     padding:2px;
     margin:2px;
     border-radius: 0.3em;
+    border: solid 0.2em var(--primary-color);
 }
 
 .article-tag-item a {
     text-decoration: none;
-    color: inherit;
+    color: var(--primary-color)
 }
 
 ::selection {
