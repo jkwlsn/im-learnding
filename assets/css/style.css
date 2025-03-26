@@ -28,6 +28,8 @@ body {
     background: var(--secondary-color);
     color: var(--primary-color);
     font-family: var(--body-fonts);
+    padding: 1em;
+    line-height: 1.5;
 }
 
 h1, h2, h3, h4 {
@@ -37,6 +39,10 @@ h1, h2, h3, h4 {
 a {
     text-decoration-style: wavy;
     text-decoration-skip-ink: none;
+}
+
+main {
+    min-height: 100vh;
 }
 
 form button {
@@ -97,6 +103,10 @@ code::selection, code span::selection {
     text-align: center;
 }
 
+#site-header {
+     scroll-margin-top: 1em;
+}
+
 #site-footer {
     display: flex;
     flex-direction: column;
@@ -115,7 +125,7 @@ code::selection, code span::selection {
 
 .cat-input {
     font-family: var(--body-fonts);
-    font-size: 6em;
+    font-size: 5em;
     text-transform: uppercase;
     border:none;
     border-bottom: 8px var(--primary-color) solid;
@@ -128,6 +138,8 @@ code::selection, code span::selection {
 }
 
 .article-date {
+    display: block;
+    margin-bottom: 1em;
     font-family: var(--heading-fonts);
 }
 
@@ -163,6 +175,13 @@ code::selection, code span::selection {
         grid-template-columns: repeat(12, 1fr);
     }
 
+    main {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 2 / 12;
+        grid-row-gap: 6em;
+    }
+
     article {
         display: grid;
         grid-template-columns: subgrid;
@@ -175,8 +194,12 @@ code::selection, code span::selection {
     }
 
     .article-wrapper {
-        grid-column:  3 / -1;
+        grid-column:  3 / 9;
         grid-row: 1;
+    }
+
+    .article-title {
+        margin-top: 0;
     }
 
     #cat-header {
@@ -191,6 +214,7 @@ code::selection, code span::selection {
         grid-column: 4 / 12;
     }
 
+    #site-footer {
         grid-column: 2 / 12;
     }
 }
