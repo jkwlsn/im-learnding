@@ -51,6 +51,20 @@ blockquote {
     margin: 2em;
 }
 
+aside {
+    background: var(--tertiary-color);
+    box-shadow: 0.5em 0.5em var(--secondary-high-contrast-color);
+    color: var(--secondary-high-contrast-color);
+    padding: 1em;
+    margin: 2em;
+    width: 30%;
+    float: left;
+}
+
+aside:nth-of-type(odd) {
+    float: right;
+}
+
 code {
     display: block;
     background: var(--secondary-high-contrast-color);
