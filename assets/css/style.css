@@ -41,10 +41,6 @@ a {
     text-decoration-skip-ink: none;
 }
 
-main {
-    min-height: 100vh;
-}
-
 form button {
     display: none;
 }
@@ -85,38 +81,6 @@ code {
 code::selection, code span::selection {
     background: #fefefe;
     color: #343434
-}
-
-#cat-header {
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height:100vh;
-}
-
-#cat-image {
-    width: 100vw;
-}
-
-#cat-form {
-    text-align: center;
-}
-
-#site-header {
-     scroll-margin-top: 1em;
-}
-
-#site-footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#site-footer-header {
-    color: #303030;
-    font-family: ibm-bios, monospace, monospace;
 }
 
 .hidden {
@@ -163,6 +127,49 @@ code::selection, code span::selection {
     color: var(--primary-color)
 }
 
+#cat-header {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    padding: 2em;
+}
+
+#cat-image {
+    width: 100vw;
+}
+
+#cat-form {
+    text-align: center;
+}
+
+#site-header {
+     scroll-margin-top: 1em;
+     padding:2em;
+}
+
+#main {
+    min-height: 100vh;
+    padding: 2em;
+}
+
+#site-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-high-contrast-color);
+    color: var(--secondary-high-contrast-color);
+    padding:2em;
+}
+
+#site-footer-header {
+    color: inherit;
+    font-family: ibm-bios, monospace, monospace;
+    font-size:1.5em;
+}
+
 ::selection {
     background-color:var(--primary-color);
     color: var(--secondary-color);
@@ -173,13 +180,6 @@ code::selection, code span::selection {
         display: grid;
         grid-gap: 2em;
         grid-template-columns: repeat(12, 1fr);
-    }
-
-    main {
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 2 / 12;
-        grid-row-gap: 6em;
     }
 
     article {
@@ -200,6 +200,13 @@ code::selection, code span::selection {
 
     .article-title {
         margin-top: 0;
+    }
+    
+    #main {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 2 / 12;
+        grid-row-gap: 6em;
     }
 
     #cat-header {
