@@ -186,6 +186,7 @@ code::selection, code span::selection {
         display: grid;
         grid-gap: 2em;
         grid-template-columns: repeat(12, 1fr);
+        font-size: 1.4em;;
     }
 
     article {
@@ -215,6 +216,10 @@ code::selection, code span::selection {
         grid-row-gap: 6em;
     }
 
+    #site-header, #main, #site-footer {
+        padding: 2em 0;
+    }
+
     #cat-header {
         grid-column: 1 / -1;
     }
@@ -228,6 +233,6 @@ code::selection, code span::selection {
     }
 
     #site-footer {
-        grid-column: 2 / 12;
+        grid-column: 1 / -1;
     }
 }
