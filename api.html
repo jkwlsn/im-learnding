@@ -1,0 +1,52 @@
+---
+layout: page
+---
+<h1>The Simpsons Lambda API</h1>
+<p></p>
+<h2>Jake's Fav Character</h2>
+<p id="api-get-fav"></p>
+<h2>Submit your own character and catchphrase</h2>
+<form id="api-post-fav-form">
+    <label for="character">Simpsons character name:</label>
+    <input type="text" id="api-post-fav-char" name="character" minlength="1"></input>
+    <label for="catchphrase">Their catchphrase:</label>
+    <input type="text" id="api-post-fav-phrase" name="catchphrase" minlength="1"></input>
+    <button>Submit</button>
+</form>
+<p id="api-post-fav"></p>
+<script>
+
+    // GET
+    async function getRequest() {
+        let response = await fetch("https://qmv4k23zf1.execute-api.eu-west-2.amazonaws.com/v1/get");
+        let text = await response.text();
+        document.getElementById("api-get-fav").innerHTML = text;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        getRequest()
+    });
+
+    // POST
+    async function postRequest(character_text, catchphrase_text) {
+        let response = await fetch("https://qmv4k23zf1.execute-api.eu-west-2.amazonaws.com/v1/post", {
+            method: "POST",
+            body: JSON.stringify({ catchphrase: catchphrase_text, character: character_text }),
+        });
+        let text = await response.text();
+        document.getElementById("api-post-fav").innerHTML = text;
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById('api-post-fav-form');
+        
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevents the default form submission
+            const characterInput = form.elements['character'];
+            const character_text = characterInput.value;
+            const catchphraseInput = form.elements['catchphrase'];
+            const catchphrase_text = catchphraseInput.value;
+            postRequest(character_text, catchphrase_text)
+        });
+    });
+</script>

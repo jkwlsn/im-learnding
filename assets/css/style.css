@@ -12,8 +12,6 @@
     src: local('ibm-bios'), url('/im-learnding/assets/fonts/ibm-bios.woff') format('woff');
 }
 
-
-
 :root {
     --primary-color: blue;
     --secondary-color: #82bdbe;
@@ -42,9 +40,6 @@ a {
     text-decoration-skip-ink: none;
 }
 
-form button {
-    display: none;
-}
 
 blockquote {
     background: var(--primary-high-contrast-color);
@@ -82,6 +77,10 @@ code {
 code::selection, code span::selection {
     background: #fefefe;
     color: #343434
+}
+
+main form input, main form label {
+    display:block;
 }
 
 .hidden {
@@ -143,6 +142,10 @@ code::selection, code span::selection {
 
 #cat-form {
     text-align: center;
+}
+
+#cat-form button {
+    display: none;
 }
 
 #site-header {
