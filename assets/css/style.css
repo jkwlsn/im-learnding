@@ -68,6 +68,12 @@ aside:nth-of-type(odd) {
 }
 
 code {
+    background: var(--primary-high-contrast-color);
+    color: var(--secondary-high-contrast-color);
+    padding: 0.1em;
+}
+
+pre code {
     display: block;
     background: var(--secondary-high-contrast-color);
     color: var(--primary-high-contrast-color);
