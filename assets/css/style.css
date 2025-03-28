@@ -108,7 +108,7 @@ main form input, main form label {
     font-family: var(--heading-fonts);
 }
 
-.article-tag-list {
+nav ul, .article-tag-list {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -117,13 +117,10 @@ main form input, main form label {
     gap: 1em;
 }
 
-.article-tag-item {
+nav ul li a, .article-tag-item a {
     border: solid 0.2em var(--primary-color);
     padding:0.2em;
     border-radius: 0.4em;
-}
-
-.article-tag-item a {
     text-decoration: none;
     color: var(--primary-color)
 }
@@ -171,7 +168,7 @@ main form input, main form label {
     text-align: center;
 }
 
-::selection {
+::selection, li a:hover {
     background-color:var(--primary-color);
     color: var(--secondary-color);
 }

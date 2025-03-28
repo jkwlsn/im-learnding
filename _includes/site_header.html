@@ -3,4 +3,10 @@
         <a href="{{ '/' | relative_url |  xml_escape }}">{{ site.title }}</a>
     </h1>
     <p>{{ site.description }}</p>
+    <nav>
+        <ul>
+            <li><a href="{{ '/about.html' | relative_url | xml_escape }}">About</a></li>
+            <li><a href="{{ '/api.html' | relative_url | xml_escape }}">Simpsons API Playground</a></li>
+        </ul>
+    </nav>
 </header>
