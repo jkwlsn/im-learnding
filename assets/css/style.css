@@ -154,11 +154,6 @@ main form input, main form label {
      padding:2em;
 }
 
-#main {
-    min-height: 100vh;
-    padding: 2em;
-}
-
 #site-footer {
     display: flex;
     flex-direction: column;
