@@ -1,19 +1,18 @@
 ---
 layout: page
+title: API testbed
 ---
-<h1>The Simpsons Lambda API</h1>
-<p></p>
 <h2>Jake's Fav Character</h2>
-<p id="api-get-fav"></p>
+<code id="api-get-fav"></code>
 <h2>Submit your own character and catchphrase</h2>
 <form id="api-post-fav-form">
     <label for="character">Simpsons character name:</label>
-    <input type="text" id="api-post-fav-char" name="character" minlength="1"></input>
+    <input type="text" id="api-post-fav-char" name="character" minlength="1">
     <label for="catchphrase">Their catchphrase:</label>
-    <input type="text" id="api-post-fav-phrase" name="catchphrase" minlength="1"></input>
-    <button>Submit</button>
+    <input type="text" id="api-post-fav-phrase" name="catchphrase" minlength="1">
+    <button type="submit">Submit</button>
 </form>
-<p id="api-post-fav"></p>
+<code id="api-post-fav"></code>
 <script>
 
     // GET
