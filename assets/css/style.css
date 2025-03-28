@@ -173,6 +173,7 @@ main form input, main form label {
     color: inherit;
     font-family: ibm-bios, monospace, monospace;
     font-size:1.5em;
+    text-align: center;
 }
 
 ::selection {
