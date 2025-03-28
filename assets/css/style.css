@@ -83,8 +83,34 @@ code::selection, code span::selection {
     color: #343434
 }
 
-main form input, main form label {
+main form input, label {
     display:block;
+}
+
+main form input {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    border: none;
+    border-bottom: dashed 0.2em var(--primary-color);
+    font-family: var(--heading-fonts);
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    caret-shape: block
+}
+
+main form button {
+    background: var(--secondary-color);
+    border: solid 0.2em var(--primary-color);
+    padding:0.2em;
+    font-family: var(--body-fonts);
+    font-size: 1.5em;
+    border-radius: 0.4em;
+    text-decoration: none;
+    color: var(--primary-color)
+}
+
+label {
+    margin-bottom: 1em
 }
 
 .hidden {
@@ -183,9 +209,10 @@ nav ul li a, .article-tag-item a {
     text-align: center;
 }
 
-::selection, li a:hover {
+::selection, li a:hover, main form button:hover {
     background-color:var(--primary-color);
     color: var(--secondary-color);
+    cursor: pointer;
 }
 
 #site-footer-header::selection {
