@@ -148,8 +148,8 @@ code::selection, code span::selection, aside::selection {
 }
 
 .cat-input {
-    font-family: var(--body-fonts);
-    font-size: 5em;
+    font-family: Helvetica, sans-serif;
+    font-size: 4em;
     text-transform: uppercase;
     border:none;
     border-bottom: 8px var(--primary-color) solid;
@@ -159,6 +159,7 @@ code::selection, code span::selection, aside::selection {
     caret-shape: block;
     outline:none;
     text-align: center;
+    width: 1em;
 }
 
 .article-date {
@@ -247,6 +248,8 @@ nav ul li a, .article-tag-item a {
         grid-template-columns: repeat(12, 1fr);
         font-size: 1.4em;;
     }
+
+    .cat-input {font-size: 5em}
 
     .article {
         display: grid;
