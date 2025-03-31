@@ -29,9 +29,9 @@ body {
     padding: 0;
     margin: 0;
     line-height: 1.5;
-    min-height: 100vh;;
-    display: grid;
     gap: 4em;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h2, h3, h4 {
@@ -137,10 +137,6 @@ label {
     text-align: center;
 }
 
-.article {
-    grid-row: auto;
-}
-
 .article-date {
     display: block;
     margin-bottom: 1em;
@@ -194,7 +190,6 @@ nav ul li a, .article-tag-item a {
 }
 
 #main {
-    display:grid;
     gap: 4em;
 }
 
@@ -263,12 +258,13 @@ nav ul li a, .article-tag-item a {
     }
 
     #site-header {
-        grid-column: 4 / 12;
+        grid-column: 4 / 10;
         padding: 0;
     }
 
     #main {
         padding: 0;
+        display: grid;
         grid-template-columns: subgrid;
         grid-column: 2 / 12;
     }
