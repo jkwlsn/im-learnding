@@ -45,12 +45,38 @@ a {
 
 img {max-width: 100%;}
 
-blockquote {
+p, code, a {
+    overflow-wrap: break-word;
+    text-wrap: auto;
+}
+
+code {
+    font-family: var(--code-fonts);
+    padding: 0.1em;
+    background-color: var(--primary-high-contrast-color);
+    color: var(--secondary-high-contrast-color);
+}
+
+div pre {
     background: var(--primary-high-contrast-color);
     box-shadow: 0.5em 0.5em var(--secondary-high-contrast-color);
     color: var(--secondary-high-contrast-color);
-    padding: 1em;
     margin: 2em;
+    padding: 1px 0.5em;
+}
+
+pre code {
+    display:block;
+	border-left: dotted 0.8em #8ebabb;
+    border-right: dotted 0.8em #8ebabb;
+    padding: 1em;
+    margin: 0.5em 0;
+    font-size: 0.8em;
+}
+
+code::selection, code span::selection {
+    background: var(--secondary-high-contrast-color);
+    color: var(--primary-high-contrast-color);
 }
 
 aside {
@@ -59,34 +85,16 @@ aside {
     color: var(--secondary-high-contrast-color);
     padding: 1em;
     margin: 2em;
-    width: 30%;
-    float: left;
 }
 
-aside:nth-of-type(odd) {
-    float: right;
-}
-
-code {
-    background: var(--primary-high-contrast-color);
-    color: var(--secondary-high-contrast-color);
-    padding: 0.1em;
-}
-
-pre code {
+blockquote {
     display: block;
     background: var(--secondary-high-contrast-color);
     color: var(--primary-high-contrast-color);
-    padding: 2em;
-    margin: 2em;
-    text-wrap-mode: wrap;
+    padding: 1em;
+    margin: 1em;
     border: 0.5em solid #6F4E37;
     text-decoration-style: dotted;
-}
-
-code::selection, code span::selection {
-    background: #fefefe;
-    color: #343434
 }
 
 main form input, label {
