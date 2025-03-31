@@ -13,7 +13,7 @@
 }
 
 :root {
-    --highlight: rgba(255,255,255,0.5);
+    --highlight: rgb(255 255 255 / 50%);
     --primary-color: blue;
     --secondary-color: #82bdbe;
     --tertiary-color: #eded55;
