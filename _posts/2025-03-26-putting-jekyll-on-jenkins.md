@@ -76,9 +76,9 @@ stage('Deploy to S3') {
 
 This line takes a number of environment variables: the `AWS_ACCESS_KEY_ID`, `AWS_CREDENTIALS`, and `AWS_SECRET_ACCESS_KEY`. These are set by the Jenkins AWS Credentials Plugin.
 
-<aside markdown="1">Why did I upload the site to /im-learnding/? Well, that where it currently sits on Github Pages. In my setup, when `jekyll build` runs it prepends every link with `/im-learnding/`, if the site is not located at `/im-learnding/` then the links will be wrong.
-
-If I was being professional, I would configure different `baseurl` values for different environments and I would set different environment variables depending on where it is being built (`local`, `staging`, `production`). However, at the moment I'm lazy and this is easier.</aside>
+<aside markdown="1">
+Why did I upload the site to /im-learnding/? Well, that where it currently sits on Github Pages. In my setup, when `jekyll build` runs it prepends every link with `/im-learnding/`, if the site is not located at `/im-learnding/` then the links will be wrong. If I was being professional, I would configure different `baseurl` values for different environments and I would set different environment variables depending on where it is being built (`local`, `staging`, `production`). However, at the moment I'm lazy and this is easier.
+</aside>
 
 With the credentials set up, I triggered another test build.
 
