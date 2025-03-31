@@ -18,8 +18,9 @@
     --tertiary-color: #eded55;
     --primary-high-contrast-color: #fefefe;
     --secondary-high-contrast-color: #343434;
-    --heading-fonts: "Simpsons", "Comic Sans MS", "Comic Sans", cursive;
-    --body-fonts: "Comic Sans MS", "Comic Sans", cursive, monospace, monospace;
+    --heading-fonts: "Simpsons", var(--body-fonts);
+    --body-fonts: "Comic Sans MS", "Comic Sans", var(--code-fonts);
+    --code-fonts: "IBM Plex Mono", monospace, monospace;
 }
 
 body {
@@ -35,7 +36,7 @@ body {
 }
 
 h1, h2, h3, h4 {
-    font-family: var(--heading-fonts)
+    font-family: var(--heading-fonts);
 }
 
 a {
@@ -165,7 +166,9 @@ nav ul li a, .article-tag-item a {
     padding:0.2em;
     border-radius: 0.4em;
     text-decoration: none;
-    color: var(--primary-color)
+    color: var(--primary-color);
+    display:inline-block;
+    width: max-content;
 }
 
 #cat-header {
