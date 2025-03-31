@@ -17,19 +17,19 @@ I installed the latest Ruby, made sure that I had gems and bundle installed, and
 
 ```jenkinsfile
 stage('Install gems') {
-	steps {
-		sh '''
-			/usr/local/rvm/gems/ruby-3.4.2/wrappers/bundle install
-		'''
-	}
+    steps {
+        sh '''
+            /usr/local/rvm/gems/ruby-3.4.2/wrappers/bundle install
+        '''
+    }
 }
 
 stage('Build Jekyll site') {
-	steps {
-		sh '''
-			/usr/local/rvm/gems/ruby-3.4.2/wrappers/bundle exec jekyll build
-		'''
-	}
+    steps {
+        sh '''
+            /usr/local/rvm/gems/ruby-3.4.2/wrappers/bundle exec jekyll build
+        '''
+    }
 }
 ```
 
@@ -63,20 +63,20 @@ I added a section to my `jenkinsfile` to sync the contents of the `_site/` direc
 
 ```jenkinsfile
 stage('Deploy to S3') {
-	steps {
-		sh '''
-			echo "Syncing to s://jacob-march-2025-static-site/im-learnding/"
-		'''
-		withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: env.AWS_CREDENTIALS, secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-			sh 'aws s3 sync _site/ s3://jacob-march-2025-static-site/im-learnding/'
-		}
-	}
+    steps {
+        sh '''
+            echo "Syncing to s://jacob-march-2025-static-site/im-learnding/"
+        '''
+        withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: env.AWS_CREDENTIALS, secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+            sh 'aws s3 sync _site/ s3://jacob-march-2025-static-site/im-learnding/'
+        }
+    }
 }
 ```
 
 This line takes a number of environment variables: the `AWS_ACCESS_KEY_ID`, `AWS_CREDENTIALS`, and `AWS_SECRET_ACCESS_KEY`. These are set by the Jenkins AWS Credentials Plugin.
 
-<aside>Why did I upload the site to /im-learnding/? Well, that where it currently sits on Github Pages. In my setup, when `jekyll build` runs it prepends every link with `/im-learnding/`, if the site is not located at `/im-learnding/` then the links will be wrong.
+<aside markdown="1">Why did I upload the site to /im-learnding/? Well, that where it currently sits on Github Pages. In my setup, when `jekyll build` runs it prepends every link with `/im-learnding/`, if the site is not located at `/im-learnding/` then the links will be wrong.
 
 If I was being professional, I would configure different `baseurl` values for different environments and I would set different environment variables depending on where it is being built (`local`, `staging`, `production`). However, at the moment I'm lazy and this is easier.</aside>
 

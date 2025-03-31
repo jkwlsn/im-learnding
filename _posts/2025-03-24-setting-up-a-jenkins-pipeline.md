@@ -176,9 +176,9 @@ I added a stage to the Jenkinsfile to clone the github repository to the server.
 
 ```jenkinsfile
 stage('Clone Repo') {
-	steps {
-		git branch: 'main', credentialsId: env.GIT_CREDENTIALS, url: 'https://github.com/jclwilson/im-learnding'
-	}
+    steps {
+        git branch: 'main', credentialsId: env.GIT_CREDENTIALS, url: 'https://github.com/jclwilson/im-learnding'
+    }
 }
 ```
 
