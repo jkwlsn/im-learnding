@@ -13,6 +13,7 @@
 }
 
 :root {
+    --highlight: rgba(255,255,255,0.5);
     --primary-color: blue;
     --secondary-color: #82bdbe;
     --tertiary-color: #eded55;
@@ -56,7 +57,7 @@ p, code, a {
 code {
     font-family: var(--code-fonts);
     padding: 0.1em;
-    background-color: var(--primary-high-contrast-color);
+    background-color: var(--highlight);
     color: var(--secondary-high-contrast-color);
 }
 
@@ -75,11 +76,6 @@ pre code {
     padding: 1em;
     margin: 0.5em 0;
     font-size: 0.8em;
-}
-
-code::selection, code span::selection {
-    background: var(--secondary-high-contrast-color);
-    color: var(--primary-high-contrast-color);
 }
 
 aside {
@@ -127,6 +123,22 @@ main form button {
 
 label {
     margin-bottom: 1em;
+}
+
+::selection, li a:hover, main form button:hover {
+    background-color:var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+blockquote::selection {
+    background: var(--primary-high-contrast-color); 
+    color: var(--secondary-high-contrast-color);
+}
+
+code::selection, code span::selection, aside::selection {
+    background: var(--secondary-high-contrast-color);
+    color: var(--primary-high-contrast-color);
 }
 
 .hidden {
@@ -220,12 +232,6 @@ nav ul li a, .article-tag-item a {
     font-family: ibm-bios, monospace, monospace;
     font-size:1.5em;
     text-align: center;
-}
-
-::selection, li a:hover, main form button:hover {
-    background-color:var(--primary-color);
-    color: var(--secondary-color);
-    cursor: pointer;
 }
 
 #site-footer-header::selection {
