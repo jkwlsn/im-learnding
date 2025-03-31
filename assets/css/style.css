@@ -44,7 +44,9 @@ a {
     text-decoration-skip-ink: none;
 }
 
-img {max-width: 100%;}
+img {
+    max-width: 100%;
+}
 
 p, code, a {
     overflow-wrap: break-word;
@@ -110,7 +112,6 @@ main form input {
     font-family: var(--heading-fonts);
     font-size: 1.5em;
     margin-bottom: 1em;
-    caret-shape: block
 }
 
 main form button {
@@ -121,11 +122,11 @@ main form button {
     font-size: 1.5em;
     border-radius: 0.4em;
     text-decoration: none;
-    color: var(--primary-color)
+    color: var(--primary-color);
 }
 
 label {
-    margin-bottom: 1em
+    margin-bottom: 1em;
 }
 
 .hidden {
